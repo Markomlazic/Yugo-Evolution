@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface");
+@mixin image {
+  position: relative;
+  opacity: 0.9;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 90vh;
+  .caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 1.3rem;
+  }
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Abril Fatface", sans-serif;
+  color: black;
+  .bgimg-1 {
+    @include image;
+    background-image: url("../img/sasha-pesic-wireframe-yugo.jpg");
+    min-height: 100%;
+    background-color: black;
+    .evo {
+      margin-left: 5rem;
+      font-size: 3rem;
+    }
+  }
+  .bgimg-2 {
+    @include image;
+    background-image: url("../img/s-l1600.jpg");
+  }
+  .bgimg-3 {
+    @include image;
+    background-image: url("../img/yugo-car-photos-3.jpg");
+  }
+  .bgimg-4 {
+    @include image;
+    background-image: url("../img/s-l1600.jpg");
+  }
+  .bgimg-5 {
+    @include image;
+    background-image: url("../img/wallpapers_zastava_yugo_45_1980_1.jpg");
+  }
+  .footer {
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(to right, #bdc3c7, #2c3e50);
+    color: black;
+    text-align: center;
+  }
+  i {
+    font-size: 3rem;
+    color: black;
+    text-align: center;
+    margin-right: 1rem;
+    &:hover {
+      background: linear-gradient(
+        to right top,
+        #d16ba5,
+        #c777b9,
+        #ba83ca,
+        #aa8fd8,
+        #9a9ae1,
+        #8aa7ec,
+        #79b3f4,
+        #69bff8,
+        #52cffe,
+        #41dfff,
+        #46eefa,
+        #5ffbf1
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+@media only screen and (max-device-width: 667px) {
+  .bgimg-1,
+  .bgimg-2,
+  .bgimg-3 {
+    background-attachment: scroll;
+  }
+  .footer {
+    flex-direction: column;
+    i,
+    h2,
+    h3 {
+      font-size: 1.2rem;
+    }
+  }
+}
